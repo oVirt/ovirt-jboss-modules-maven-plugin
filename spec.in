@@ -46,10 +46,10 @@ This package contains the API documentation for %{name}.
 %dir %{_javadir}/%{name}
 %doc AUTHORS.md
 %doc README.md
-%doc LICENSE.txt
+%license LICENSE.txt
 
 %files javadoc -f .mfiles-javadoc
-%doc LICENSE.txt
+%license LICENSE.txt
 
 %changelog
 * Wed Oct 7 2015 Juan Hernandez <juan.hernandez@redhat.com> - 2.0.0-1
