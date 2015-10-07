@@ -1,0 +1,56 @@
+Name: ovirt-jboss-modules-maven-plugin
+Version: @RPM_VERSION@
+Release: @RPM_RELEASE@
+Summary: oVirt JBoss Modules Maven Plugin
+Group: Development/Libraries
+License: ASL 2.0
+URL: https://www.ovirt.org
+Source: @TARBALL@
+BuildArch: noarch
+
+BuildRequires: maven-local
+BuildRequires: mvn(org.apache.maven.plugin-tools:maven-plugin-annotations)
+BuildRequires: mvn(org.apache.maven.plugins:maven-gpg-plugin)
+BuildRequires: mvn(org.apache.maven.plugins:maven-javadoc-plugin)
+BuildRequires: mvn(org.apache.maven.plugins:maven-plugin-plugin)
+BuildRequires: mvn(org.apache.maven.plugins:maven-release-plugin)
+BuildRequires: mvn(org.apache.maven.plugins:maven-source-plugin)
+BuildRequires: mvn(org.apache.maven:maven-artifact)
+BuildRequires: mvn(org.apache.maven:maven-core)
+BuildRequires: mvn(org.apache.maven:maven-plugin-api)
+BuildRequires: mvn(org.apache.maven:maven-project)
+BuildRequires: mvn(org.codehaus.plexus:plexus-archiver)
+BuildRequires: mvn(org.codehaus.plexus:plexus-utils)
+BuildRequires: mvn(org.jboss:jandex)
+
+%description
+Maven Plugin used to generate and attach an artifact containing
+JBoss modules.
+
+%package javadoc
+Summary: Javadoc for %{name}.
+
+%description javadoc
+This package contains the API documentation for %{name}.
+
+%prep
+%setup -q -n %{name}
+
+%build
+%mvn_build
+
+%install
+%mvn_install
+
+%files -f .mfiles
+%dir %{_javadir}/%{name}
+%doc AUTHORS.md
+%doc README.md
+%doc LICENSE.txt
+
+%files javadoc -f .mfiles-javadoc
+%doc LICENSE.txt
+
+%changelog
+* Wed Oct 7 2015 Juan Hernandez <juan.hernandez@redhat.com> - 2.0.0-1
+- Initial packaging.

@@ -1,5 +1,8 @@
+*.gz
 *.iml
 *.releaseBackup
+*.spec
 .idea
 release.properties
+rpmtop
 target
