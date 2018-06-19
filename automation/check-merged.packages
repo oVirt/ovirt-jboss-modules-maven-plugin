@@ -2,3 +2,6 @@ git
 python
 python-lxml
 dnf-utils
+dnf
+which
+
