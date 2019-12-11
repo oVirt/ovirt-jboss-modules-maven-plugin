@@ -24,11 +24,10 @@ URL: https://www.ovirt.org
 Source: @TARBALL@
 BuildArch: noarch
 
+BuildRequires: javapackages-tools
 BuildRequires: maven-local
 BuildRequires: mvn(org.apache.maven.plugin-tools:maven-plugin-annotations)
-BuildRequires: mvn(org.apache.maven.plugins:maven-javadoc-plugin)
 BuildRequires: mvn(org.apache.maven.plugins:maven-plugin-plugin)
-BuildRequires: mvn(org.apache.maven.plugins:maven-release-plugin)
 BuildRequires: mvn(org.apache.maven.plugins:maven-source-plugin)
 BuildRequires: mvn(org.apache.maven:maven-artifact)
 BuildRequires: mvn(org.apache.maven:maven-core)
@@ -36,6 +35,12 @@ BuildRequires: mvn(org.apache.maven:maven-plugin-api)
 BuildRequires: mvn(org.apache.maven:maven-project)
 BuildRequires: mvn(org.codehaus.plexus:plexus-archiver)
 BuildRequires: mvn(org.codehaus.plexus:plexus-utils)
+
+%if 0%{?fedora} || 0%{?rhel} < 8
+# Below plugins are provided within maven-local in EL8+
+BuildRequires: mvn(org.apache.maven.plugins:maven-javadoc-plugin)
+BuildRequires: mvn(org.apache.maven.plugins:maven-release-plugin)
+%endif
 
 %description
 Maven Plugin used to generate and attach an artifact containing
@@ -49,6 +54,11 @@ This package contains the API documentation for %{name}.
 
 %prep
 %setup -q -n %{name}
+
+%if 0%{?rhel} >= 8
+# No need for maven-javadoc-plugin in RHEL 8, xmvn will take care of it.
+%pom_remove_plugin -r :maven-javadoc-plugin pom.xml
+%endif
 
 %build
 %mvn_build

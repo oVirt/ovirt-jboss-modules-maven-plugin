@@ -1,4 +1,4 @@
 git
-python
-python-lxml
+python3
+python3-lxml
 dnf-utils
