@@ -26,7 +26,6 @@ BuildArch: noarch
 
 BuildRequires: maven-local
 BuildRequires: mvn(org.apache.maven.plugin-tools:maven-plugin-annotations)
-BuildRequires: mvn(org.apache.maven.plugins:maven-gpg-plugin)
 BuildRequires: mvn(org.apache.maven.plugins:maven-javadoc-plugin)
 BuildRequires: mvn(org.apache.maven.plugins:maven-plugin-plugin)
 BuildRequires: mvn(org.apache.maven.plugins:maven-release-plugin)
