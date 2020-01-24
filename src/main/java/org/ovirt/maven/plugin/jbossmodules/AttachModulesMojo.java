@@ -33,8 +33,6 @@ import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.MavenProjectHelper;
 import org.codehaus.plexus.archiver.zip.ZipArchiver;
 import org.codehaus.plexus.util.FileUtils;
-import org.jboss.jandex.Indexer;
-import org.jboss.jandex.JarIndexer;
 
 /**
  * This mojo creates a {@code .zip} file containing the {@code .jar} file of the project and the {@code module.xml}
@@ -80,9 +78,9 @@ public class AttachModulesMojo extends AbstractMojo {
     private List<Module> modules;
 
     /**
-     * This parameter indicates if the generated modules should include also annotation indexes.
+     * This is parameter is no longer used, index generation has been removed.
      */
-    @Parameter(property = "generateIndex", defaultValue="true")
+    @Parameter(property = "generateIndex", defaultValue = "false")
     private boolean generateIndex;
 
     /**
@@ -263,20 +261,6 @@ public class AttachModulesMojo extends AbstractMojo {
                 slotDir.getAbsolutePath() + "\".",
                 exception
             );
-        }
-
-        // Add the annotations index to the artifact file stored in the slot directory:
-        if (generateIndex) {
-            getLog().info("Creating annotations index for \"" + artifactTo.getAbsolutePath() + "\"");
-            try {
-                JarIndexer.createJarIndex(artifactTo, new Indexer(), true, false, false);
-            }
-            catch (IOException exception) {
-                throw new MojoExecutionException(
-                    "Can't add annotations index to \"" + artifactTo.getAbsolutePath() + "\".",
-                     exception
-                );
-            }
         }
     }
 }

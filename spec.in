@@ -36,7 +36,6 @@ BuildRequires: mvn(org.apache.maven:maven-plugin-api)
 BuildRequires: mvn(org.apache.maven:maven-project)
 BuildRequires: mvn(org.codehaus.plexus:plexus-archiver)
 BuildRequires: mvn(org.codehaus.plexus:plexus-utils)
-BuildRequires: mvn(org.jboss:jandex)
 
 %description
 Maven Plugin used to generate and attach an artifact containing
