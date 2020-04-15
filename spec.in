@@ -21,7 +21,7 @@ Summary: oVirt JBoss Modules Maven Plugin
 Group: Development/Libraries
 License: ASL 2.0
 URL: https://www.ovirt.org
-Source: @TARBALL@
+Source: https://resources.ovirt.org/pub/src/%{name}/@TARBALL@
 BuildArch: noarch
 
 BuildRequires: javapackages-tools
@@ -76,5 +76,8 @@ This package contains the API documentation for %{name}.
 %license LICENSE.txt
 
 %changelog
-* Wed Oct 7 2015 Juan Hernandez <juan.hernandez@redhat.com> - 2.0.0-1
+* Wed Apr 15 2020 Sandro Bonazzola <sbonazzo@redhat.com> - 2.0.2-1
+- Rebase on 2.0.2
+
+* Wed Oct  7 2015 Juan Hernandez <juan.hernandez@redhat.com> - 2.0.0-1
 - Initial packaging.
