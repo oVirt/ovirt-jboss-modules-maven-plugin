@@ -1,8 +1,4 @@
----
-stage:
-  - build-artifacts
-  - check-merged
-  - check-patch
-distro: [el8, fc30]
+distros:
+  - el8
 release_branches:
-    master: ovirt-master
+  master: ovirt-master
