@@ -2,6 +2,8 @@
 
 MAVEN_SETTINGS="/etc/maven/settings.xml"
 
+# Set the location of the JDK that will be used for maven
+export JAVA_HOME="${JAVA_HOME:=/usr/lib/jvm/java-11}"
 
 # Use ovirt mirror if able, fall back to central maven
 mkdir -p "${MAVEN_SETTINGS%/*}"

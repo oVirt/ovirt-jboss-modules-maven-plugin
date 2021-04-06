@@ -1,5 +1,6 @@
 dnf-utils
 git
+java-11-openjdk-devel
 maven
 maven-doxia-sink-api
 maven-doxia-sitetools
