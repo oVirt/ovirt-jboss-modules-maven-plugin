@@ -19,7 +19,7 @@ TARBALL=$(NAME)-$(pomversion).tar.gz
 SRPM=$(RPMTOP)/SRPMS/$(NAME)-$(rpmversion)-$(rpmrelease).src.rpm
 
 .PHONY:
-spec: spec$(rpmdist).in
+spec: ovirt-jboss-modules-maven-plugin.spec.in
 	sed \
 		-e 's/@POM_VERSION@/$(pomversion)/g' \
 		-e 's/@RPM_VERSION@/$(rpmversion)/g' \
