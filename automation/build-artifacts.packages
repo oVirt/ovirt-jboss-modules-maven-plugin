@@ -1,4 +1,14 @@
-git
-python3
-python3-lxml
 dnf-utils
+git
+maven
+maven-doxia-sink-api
+maven-doxia-sitetools
+maven-lib
+maven-local
+maven-plugin-tools-annotations
+maven-plugin-tools-api
+maven-plugin-tools-generators
+maven-plugin-tools-java
+maven-project
+maven-reporting-impl
+
