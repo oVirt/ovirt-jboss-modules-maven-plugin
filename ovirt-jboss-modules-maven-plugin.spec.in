@@ -67,6 +67,12 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 %license LICENSE.txt
 
 %changelog
+* Wed Apr 7 2021 Martin Perina <mperina@redhat.com> - 2.0.3-1
+- Rebuild the project with OpenJDK 11
+- Align project dependencies with latest recommendations about Maven plugins
+  development
+- Align RPM dependencies with Maven dependencies
+
 * Wed Apr 15 2020 Sandro Bonazzola <sbonazzo@redhat.com> - 2.0.2-1
 - Rebase on 2.0.2
 
