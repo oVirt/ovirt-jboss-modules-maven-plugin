@@ -10,6 +10,5 @@ maven-plugin-tools-annotations
 maven-plugin-tools-api
 maven-plugin-tools-generators
 maven-plugin-tools-java
-maven-project
 maven-reporting-impl
 
