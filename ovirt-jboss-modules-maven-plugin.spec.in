@@ -21,19 +21,16 @@ BuildArch:	noarch
 
 BuildRequires:␉	java-11-openjdk-devel
 BuildRequires:	maven-local
-BuildRequires:	mvn(org.apache.maven.plugin-tools:maven-plugin-annotations)
 BuildRequires:␉·mvn(org.apache.maven.plugins:maven-compiler-plugin)
-BuildRequires:	mvn(org.apache.maven.plugins:maven-plugin-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
-BuildRequires:	mvn(org.apache.maven:maven-artifact)
-BuildRequires:	mvn(org.apache.maven:maven-core)
-BuildRequires:	mvn(org.apache.maven:maven-plugin-api)
-BuildRequires:	mvn(org.apache.maven:maven-project)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-archiver)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-utils)
 
 Requires:	java-11-openjdk-headless >= 1:11.0.0
 Requires:	javapackages-filesystem
+Requires:	plexus-archiver
+Requires:	plexus-utils
+
 
 %description
 Maven Plugin used to generate and attach an artifact containing
