@@ -1,5 +1,8 @@
 #!/bin/bash -xe
 
+# Ensure maven is available for mvn command and /etc/maven directory existance
+dnf -y install maven
+
 MAVEN_SETTINGS="/etc/maven/settings.xml"
 
 # Set the location of the JDK that will be used for maven
@@ -50,6 +53,9 @@ sed \
     -e "s|@RELEASE@|${RELEASE}|g" \
     < ovirt-jboss-modules-maven-plugin.spec.in \
     > ovirt-jboss-modules-maven-plugin.spec
+
+# Ensure build dependencies are installed
+dnf builddep -y ovirt-jboss-modules-maven-plugin.spec
 
 rpmbuild \
     --define "_topmdir $PWD/rpmbuild" \

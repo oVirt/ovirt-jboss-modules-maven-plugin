@@ -19,9 +19,9 @@ AutoReq:	no
 
 BuildArch:	noarch
 
-BuildRequires:␉	java-11-openjdk-devel
+BuildRequires:  java-11-openjdk-devel
 BuildRequires:	maven-local
-BuildRequires:␉·mvn(org.apache.maven.plugins:maven-compiler-plugin)
+BuildRequires:  mvn(org.apache.maven.plugins:maven-compiler-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-plugin-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-archiver)

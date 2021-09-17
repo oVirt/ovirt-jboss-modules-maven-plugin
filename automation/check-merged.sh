@@ -16,7 +16,9 @@ pushd exported-artifacts
     dnf clean all
     dnf install -y http://resources.ovirt.org/pub/yum-repo/ovirt-release-master.rpm
 
-    dnf module enable pki-deps javapackages-tools
+    if [[ "$(rpm --eval "%dist")" == ".el8" ]]; then
+        dnf module enable pki-deps javapackages-tools
+    fi
     dnf --downloadonly install *noarch.rpm
 
 popd
