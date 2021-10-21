@@ -58,7 +58,7 @@ sed \
 dnf builddep -y ovirt-jboss-modules-maven-plugin.spec
 
 rpmbuild \
-    --define "_topmdir $PWD/rpmbuild" \
+    --define "_topdir $PWD/rpmbuild" \
     --define "_rpmdir $PWD/rpmbuild" \
     -ba --nodeps ovirt-jboss-modules-maven-plugin.spec
 
