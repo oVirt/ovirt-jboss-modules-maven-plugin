@@ -1,3 +1,5 @@
+.PHONY: installdeps srpm
+
 installdeps:
 	dnf -y install git gzip java-11-openjdk-devel maven rpm-build sed
 
