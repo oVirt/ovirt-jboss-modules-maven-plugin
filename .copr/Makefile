@@ -1,3 +1,3 @@
 srpm:
-	./automation/build-copr.sh
+	./.automation/build-srpm.sh
 	cp rpmbuild/SRPMS/*.src.rpm $(outdir)
