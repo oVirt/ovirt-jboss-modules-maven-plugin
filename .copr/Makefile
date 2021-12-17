@@ -1,5 +1,5 @@
 installdeps:
-        dnf -y install git gzip java-11-openjdk-devel maven rpm-build sed
+	dnf -y install git gzip java-11-openjdk-devel maven rpm-build sed
 
 srpm:
 	./.automation/build-srpm.sh
