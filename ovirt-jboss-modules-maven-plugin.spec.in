@@ -27,6 +27,9 @@ BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-archiver)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-utils)
 
+# Required because of old xmvn version in COPR
+BuildRequires: maven
+
 Requires:	java-11-openjdk-headless >= 1:11.0.0
 Requires:	javapackages-filesystem
 Requires:	plexus-archiver
