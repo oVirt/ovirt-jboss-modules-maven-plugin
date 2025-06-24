@@ -24,3 +24,11 @@ To submit a bug or suggest an enhancement for oVirt JBoss Modules Maven Plugin p
 
 If you have any other questions or suggestions, you can join and contact us on the [oVirt Users forum / mailing list](https://lists.ovirt.org/admin/lists/users.ovirt.org/).
 
+## Release to Maven Central
+
+To deploy a new release to [Maven Central](https://central.sonatype.com/artifact/org.ovirt.maven.plugins/ovirt-jboss-modules-maven-plugin), bump the release version in the `pom.xml` run the following command:
+
+```bash
+mvn deploy -Psign
+```
+After this command has succesfully run, the next step is to manually deploy this release on the maven central website itself.
