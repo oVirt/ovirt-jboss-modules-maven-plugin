@@ -12,15 +12,9 @@ License:	ASL 2.0
 URL:		https://www.ovirt.org
 Source:		%{name}-%{version}.tar.gz
 
-# We need to disable automatic generation of "Requires: java-headless >= 1:11"
-# by xmvn, becase JDK 11 doesn't provide java-headless artifact, but it
-# provides java-11-headless.
-AutoReq:	no
-
 BuildArch:	noarch
 
-BuildRequires:  java-11-openjdk-devel
-BuildRequires:	maven-local
+BuildRequires:	maven-local-openjdk21
 BuildRequires:  mvn(org.apache.maven.plugins:maven-compiler-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-plugin-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
@@ -30,11 +24,7 @@ BuildRequires:	mvn(org.codehaus.plexus:plexus-utils)
 # Required because of old xmvn version in COPR
 BuildRequires: maven
 
-Requires:	java-11-openjdk-headless >= 1:11.0.0
-Requires:	javapackages-filesystem
-Requires:	plexus-archiver
-Requires:	plexus-utils
-
+Requires: (java-11-openjdk-headless or java-21-openjdk-headless)
 
 %description
 Maven Plugin used to generate and attach an artifact containing
@@ -53,8 +43,6 @@ This package contains the API documentation for %{name}.
 %pom_remove_plugin :maven-javadoc-plugin pom.xml
 
 %build
-# Necessary to override the default for xmvn, which is JDK 8
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk"
 
 %mvn_build
 
