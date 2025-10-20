@@ -62,6 +62,13 @@ This package contains the API documentation for %{name}.
 %license LICENSE.txt
 
 %changelog
+* Mon Oct 20 2025 Jean-Louis Dupond <jean-louis@dupond.be> - 2.0.4-1
+- Add maven-plugin-plugin to RPM dependencies
+- Bump plexus-utils to 3.1.0
+- Bump plexus-archiver to 3.6.0
+- Build for CentOS 10
+- Build with Java 21
+
 * Wed Apr 7 2021 Martin Perina <mperina@redhat.com> - 2.0.3-1
 - Rebuild the project with OpenJDK 11
 - Align project dependencies with latest recommendations about Maven plugins

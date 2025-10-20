@@ -10,7 +10,7 @@
 
   <groupId>org.ovirt.maven.plugins</groupId>
   <artifactId>ovirt-jboss-modules-maven-plugin</artifactId>
-  <version>2.0.4-SNAPSHOT</version>
+  <version>2.0.4</version>
   <packaging>maven-plugin</packaging>
 
   <name>oVirt JBoss Modules Maven Plugin</name>
@@ -45,10 +45,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://gerrit.ovirt.org/ovirt-jboss-modules-maven-plugin.git</connection>
-    <developerConnection>scm:git:git://gerrit.ovirt.org/ovirt-jboss-modules-maven-plugin.git</developerConnection>
-    <url>git://gerrit.ovirt.org/ovirt-jboss-modules-maven-plugin.git</url>
-    <tag>HEAD</tag>
+    <connection>scm:git:git@github.com:oVirt/ovirt-jboss-modules-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:oVirt/ovirt-jboss-modules-maven-plugin.git</developerConnection>
+    <url>https://github.com/oVirt/ovirt-jboss-modules-maven-plugin.git</url>
+    <tag>2.0.4</tag>
   </scm>
 
   <properties>
