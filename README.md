@@ -1,7 +1,5 @@
 # oVirt JBoss Modules Maven Plugin
 
-[![Copr build status](https://copr.fedorainfracloud.org/coprs/ovirt/ovirt-master-snapshot/package/ovirt-jboss-modules-maven-plugin/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/ovirt/ovirt-master-snapshot/package/ovirt-jboss-modules-maven-plugin/)
-
 Welcome to the oVirt JBoss Modules Maven Plugin source repository.
 This repository is hosted on [GitHub:ovirt-jboss-modules-maven-plugin](https://github.com/oVirt/ovirt-jboss-modules-maven-plugin)
 
