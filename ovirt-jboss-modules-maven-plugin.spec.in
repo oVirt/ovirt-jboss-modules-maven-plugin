@@ -5,7 +5,7 @@
 
 Name:		ovirt-jboss-modules-maven-plugin
 Version:	@VERSION@
-Release:	@RELEASE@%{?dist}
+Release:	@RELEASE@%{?release_suffix}%{?dist}
 Summary:	oVirt JBoss Modules Maven Plugin
 Group:		Development/Libraries
 License:	ASL 2.0
@@ -20,9 +20,6 @@ BuildRequires:	mvn(org.apache.maven.plugins:maven-plugin-plugin)
 BuildRequires:	mvn(org.apache.maven.plugins:maven-source-plugin)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-archiver)
 BuildRequires:	mvn(org.codehaus.plexus:plexus-utils)
-
-# Required because of old xmvn version in COPR
-BuildRequires: maven
 
 Requires: (java-11-openjdk-headless or java-21-openjdk-headless)
 
